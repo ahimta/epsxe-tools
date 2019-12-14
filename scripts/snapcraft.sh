@@ -47,7 +47,7 @@ rm --force $SnapcraftFile
 cp $SnapcraftTemplate $SnapcraftFile
 
 GenerationNote="# NOTE: This file is generated using 'scripts/snapcraft.sh'."
-sed --in-place "1s|^|$GenerationNote\n|" $SnapcraftFile
+sed --in-place "1s|^|$GenerationNote\\n|" $SnapcraftFile
 
 sed --in-place "s|@@TITLE@@|$Title|g" $SnapcraftFile
 sed --in-place "s|@@NAME@@|$Name|g" $SnapcraftFile
