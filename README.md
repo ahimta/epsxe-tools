@@ -1,5 +1,7 @@
 # ePSXe Tools
 
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/epsxe)
+
 Things that can make [ePSXe](http://www.epsxe.com) easier to build, install, or
 use.
 
