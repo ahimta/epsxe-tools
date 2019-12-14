@@ -15,8 +15,6 @@ if test $? -ne 0; then
   exit $?
 fi
 
-# sudo snap install --dangerous ./*.snap &&\
-#   sudo snap connect "$SnapName:alsa" :alsa &&\
-#   sudo snap connect "$SnapName:joystick" :joystick
-
-sudo snap install --dangerous --devmode ./*.snap
+sudo snap install --dangerous ./*.snap &&\
+  sudo snap connect "$SnapName:alsa" :alsa &&\
+  sudo snap connect "$SnapName:joystick" :joystick
