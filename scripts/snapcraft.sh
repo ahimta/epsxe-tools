@@ -52,6 +52,6 @@ sed --in-place "1s|^|$GenerationNote\n|" $SnapcraftFile
 sed --in-place "s|@@TITLE@@|$Title|g" $SnapcraftFile
 sed --in-place "s|@@NAME@@|$Name|g" $SnapcraftFile
 sed --in-place "s|@@GRADE@@|$Grade|g" $SnapcraftFile
-sed --in-place "s|@@VERSION@@|$Version|g" $SnapcraftFile
+sed --in-place "s|@@VERSION@@|'$Version'|g" $SnapcraftFile
 
 snapcraft "${SnapcraftArgs[@]}"
