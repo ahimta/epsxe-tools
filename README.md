@@ -7,11 +7,11 @@ use.
 
 ## Possible Things
 
-- [ ] Packaging: Building Snap package.
-- [ ] Packaging: Releasing Snap package.
+- [x] Packaging: Building Snap package.
+- [x] Packaging: Releasing Snap package.
 - [ ] Packaging: Building Flatpak package.
 - [ ] Packaging: Releasing Flatpak package.
-- [ ] CI/CD: Linting shell-scripts.
+- [x] CI/CD: Linting shell-scripts.
 - [ ] CI/CD: Producing Snap packages.
 - [ ] CI/CD: Installing Snap packages on different environments.
 - [ ] CI/CD: Testing as much as possible of Snap packages.
