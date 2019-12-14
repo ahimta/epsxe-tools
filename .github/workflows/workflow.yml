@@ -1,0 +1,43 @@
+name: CI Pipeline
+on: [push, pull_request]
+jobs:
+  test:
+    name: ${{ matrix.environments.display }}
+    runs-on: ubuntu-18.04
+    container:
+      image: ${{ matrix.environments.container_image }}
+    strategy:
+      matrix:
+        environments:
+        - display: Debian 10 (Buster)
+          container_image: debian:10
+          install_dependencies: |
+            apt-get update -qq
+            apt-get install -y -qq shellcheck > /dev/null
+        - display: Fedora 30
+          container_image: fedora:30
+          install_dependencies: |
+            dnf install -y -q shellcheck
+        - display: Fedora 31
+          container_image: fedora:31
+          install_dependencies: |
+            dnf install -y -q shellcheck
+        - display: Ubuntu 16.04 (Xenial)
+          container_image: ubuntu:16.04
+          install_dependencies: |
+            apt-get update -qq
+            apt-get install -y -qq shellcheck > /dev/null
+        - display: Ubuntu 18.04 (Bionic)
+          container_image: ubuntu:18.04
+          install_dependencies: |
+            apt-get update -qq
+            apt-get install -y -qq shellcheck > /dev/null
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Install Dependencies
+      run: ${{ matrix.environments.install_dependencies }}
+
+    - name: Lint/Test BASH Scripts
+      run: shellcheck scripts/*.sh
