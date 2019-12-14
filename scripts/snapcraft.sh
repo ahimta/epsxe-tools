@@ -38,7 +38,7 @@ SnapcraftTemplate=snap/local/snapcraft.scaffold.yaml
 VersionMajor="2"
 VersionMinor="0"
 VersionPatch="5"
-VersionGit=$(git rev-parse --short HEAD || echo "blablabla")
+VersionGit=$(git rev-parse --short HEAD)
 Version="$VersionMajor.$VersionMinor.$VersionPatch+git-$VersionGit"
 
 rm --force ./*.snap
