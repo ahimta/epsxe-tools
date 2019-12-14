@@ -17,11 +17,11 @@ jobs:
         - display: Fedora 30
           container_image: fedora:30
           install_dependencies: |
-            dnf install -y -q shellcheck
+            dnf install -y -q ShellCheck
         - display: Fedora 31
           container_image: fedora:31
           install_dependencies: |
-            dnf install -y -q shellcheck
+            dnf install -y -q ShellCheck
         - display: Ubuntu 16.04 (Xenial)
           container_image: ubuntu:16.04
           install_dependencies: |
