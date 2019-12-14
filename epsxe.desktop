@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=epsxe
+Name=ePSXe
+Comment=ePSXe (enhanced PSX emulator)
+Icon=epsxe.svg
+Categories=Game;Emulator;
