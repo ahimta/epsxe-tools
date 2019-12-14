@@ -3,6 +3,11 @@ name: @@NAME@@ # you probably want to 'snapcraft register <name>'
 base: core18 # the base snap is the execution environment for this snap
 summary: A PlayStation 1 emulator # 79 char summary
 description: |
+  NOTE: At the moment, this package is still in its early stages and the most
+  notable known issue is that sound doesn't work:sweat_smile:. My personal
+  recommendation is to just listen to podcasts or something when you're playing
+  games:sweat_smile:.
+
   ePSXe (enhanced PSX emulator) is a PlayStation video game console emulator for
   x86-based PC hardware with Microsoft Windows or Linux, as well as devices
   running Android.
