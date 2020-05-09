@@ -55,8 +55,7 @@ apps:
 
 parts:
   epsxe:
-    after: [gnome-extension]
-    plugin: nil # See 'snapcraft plugins'
+    plugin: nil
     source: .
     build-packages: [execstack]
     override-build: |
